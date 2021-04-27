@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loci/core/app_gradient.dart';
 import 'package:loci/core/app_images.dart';
 import 'package:loci/core/core.dart';
 
@@ -10,28 +11,21 @@ class SplashPage extends StatelessWidget {
     // ).then((_) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) Homepage(),),),);
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
-            stops: [
-              0.05,
-              0.2,
-              0.5,
-              0.8,
-              0.95,
-            ],
-            colors: [
-              Colors.red.shade800,
-              Colors.purple.shade800,
-              Colors.grey.shade200,
-              Colors.deepPurple,
-              Colors.red.shade800,
-            ],
-          ),
-        ),
-        child: Center(
-          child: Image.asset(AppImages.logo),
+        padding: EdgeInsets.symmetric(vertical: 160),
+        decoration: BoxDecoration(gradient: AppGradients.linear),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Center(
+              child: Image.asset(AppImages.logoShadow),
+            ),
+            Text.rich(
+              TextSpan(
+                text: "Turkey in Space",
+                style: AppTextStyles.splash,
+              ),
+            ),
+          ],
         ),
       ),
     );
