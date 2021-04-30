@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:loci/splash/splash_page.dart';
+import 'package:loci/login/login_page.dart';
 
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "LOCI",
-      home: SplashPage(),
+      home: LoginPage(),
     );
   }
 }
