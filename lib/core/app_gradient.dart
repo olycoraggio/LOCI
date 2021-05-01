@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class AppGradients {
-  static final linear = LinearGradient(
+  static final linearBackground = LinearGradient(
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,
     colors: [
-      Colors.red[800],
-      Colors.purple[800],
-      Colors.grey[200],
-      Colors.deepPurple,
-      Colors.red[800],
+      Color(0xFF000080),
+      Colors.yellow[900],
+      Colors.grey[350],
+      Colors.yellow[900],
+      Color(0xFF000080),
     ],
     stops: [
       0.05,
@@ -23,14 +23,14 @@ class AppGradients {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Colors.black,
-      Colors.blueGrey[900],
+      Color(0xFF000080),
+      Colors.yellow[900],
       Colors.grey[350],
     ],
     stops: [
       0.15,
       0.5,
-      0.6,
+      0.8,
     ],
   );
 }

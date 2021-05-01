@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:loci/core/app_colors.dart';
 import 'package:loci/core/app_text_styles.dart';
+
+import '../../../core/app_colors.dart';
 
 class LoginCardWidget extends StatelessWidget {
   const LoginCardWidget({Key key}) : super(key: key);
@@ -11,7 +12,7 @@ class LoginCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
-        height: 500,
+        height: 550,
         width: double.maxFinite,
         decoration: BoxDecoration(
           color: AppColors.box,
@@ -39,42 +40,79 @@ class LoginCardWidget extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  "Você esta na mesa 7",
+                  "Você está na mesa 7!",
                   style: AppTextStyles.headingSec,
                 ),
               ],
             ),
-            Expanded(
-              child: Container(
+            Container(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 80, vertical: 10),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                          hintText: '? Quantas pessoas são',
-                          hintTextDirection: TextDirection.rtl),
+                        labelText: 'Quantos tripulantes são?',
+                      ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
-                    )
                   ],
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30, bottom: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Nome do primeiro tripulante:',
+                    ),
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Nome do segundo tripulante:',
+                    ),
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Nome do terceiro tripulante:',
+                    ),
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Nome do quarto tripulante:',
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Expanded(
               child: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: 'Nome das pessoas (Opcional)',
-                          hintTextDirection: TextDirection.rtl),
+                    SizedBox(
+                      width: 250,
+                      height: 60,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Decolar'),
+                        style: ElevatedButton.styleFrom(
+                          primary: AppColors.backgroundButton,
+                          onPrimary: Colors.white,
+                          textStyle: TextStyle(
+                            fontSize: 30,
+                          ),
+                          shadowColor: Colors.grey,
+                          elevation: 5,
+                        ),
+                      ),
                     ),
-                    TextFormField(),
-                    TextFormField(),
-                    TextFormField(),
                   ],
                 ),
               ),

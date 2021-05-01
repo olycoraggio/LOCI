@@ -20,7 +20,7 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 160),
-        decoration: BoxDecoration(gradient: AppGradients.linear),
+        decoration: BoxDecoration(gradient: AppGradients.linearBackground),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
