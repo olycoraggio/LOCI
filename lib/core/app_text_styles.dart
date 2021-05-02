@@ -43,9 +43,8 @@ class AppTextStyles {
   );
 
   static final TextStyle headingSec = GoogleFonts.passeroOne(
-    color: Colors.grey.withRed(130),
-    fontSize: 26,
-    decoration: TextDecoration.underline,
+    color: Colors.grey[900],
+    fontSize: 20,
   );
 
   static final TextStyle heading = GoogleFonts.passeroOne(
@@ -53,10 +52,11 @@ class AppTextStyles {
     fontSize: 24,
   );
 
-  static final TextStyle headingSlogan = GoogleFonts.passeroOne(
-    color: Colors.grey[900],
-    fontSize: 35,
+  static final TextStyle headingTable = GoogleFonts.passeroOne(
+    color: Colors.grey.withRed(130),
+    fontSize: 40,
     fontWeight: FontWeight.w500,
+    decoration: TextDecoration.underline,
   );
 
   static final TextStyle body = GoogleFonts.electrolize(

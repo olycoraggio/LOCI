@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:loci/core/app_colors.dart';
 import 'package:loci/core/app_text_styles.dart';
+import 'package:loci/login/widgets/counter/counter_widget.dart';
+import 'package:loci/menu/menu_page.dart';
 
 import '../../../core/app_colors.dart';
 
@@ -30,20 +32,14 @@ class LoginCardWidget extends StatelessWidget {
           children: [
             Container(
               child: Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Text(
-                  "EXPLOSÃO DE SABORES!",
-                  style: AppTextStyles.headingSlogan,
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text("Você está na mesa 7!",
+                        style: AppTextStyles.headingTable),
+                  ],
                 ),
               ),
-            ),
-            Column(
-              children: [
-                Text(
-                  "Você está na mesa 7!",
-                  style: AppTextStyles.headingSec,
-                ),
-              ],
             ),
             Container(
               child: Padding(
@@ -52,13 +48,8 @@ class LoginCardWidget extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        labelText: 'Quantos tripulantes são?',
-                      ),
-                    ),
+                    CounterWidget(),
                   ],
                 ),
               ),
@@ -100,7 +91,14 @@ class LoginCardWidget extends StatelessWidget {
                       width: 250,
                       height: 60,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MenuPage(),
+                            ),
+                          );
+                        },
                         child: Text('Decolar'),
                         style: ElevatedButton.styleFrom(
                           primary: AppColors.backgroundButton,
