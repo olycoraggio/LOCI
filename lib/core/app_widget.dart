@@ -12,7 +12,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "LOCI",
-      home: SplashPage(),
+      home: MenuPage(),
     );
   }
 }

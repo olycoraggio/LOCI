@@ -39,15 +39,6 @@ class BarWidget extends PreferredSize {
                           style: AppTextStyles.logo,
                         ),
                       ),
-                      // Container(
-                      //   decoration: BoxDecoration(
-                      //     image: DecorationImage(
-                      //       image: AssetImage(
-                      //         'assets/images/Logo.png',
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),
