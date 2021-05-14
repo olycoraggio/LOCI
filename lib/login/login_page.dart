@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loci/login/widgets/bar/bar_widget.dart';
+import 'package:loci/login/widgets/login_card/login_card_widget.dart';
 
 import '../core/app_colors.dart';
 
@@ -15,11 +16,17 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BarWidget(),
+      body: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(5),
+          child: LoginCardWidget(),
+        ),
+      ),
       backgroundColor: Colors.blueGrey[900],
       bottomNavigationBar: SafeArea(
         bottom: true,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 60),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

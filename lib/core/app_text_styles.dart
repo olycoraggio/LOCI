@@ -5,7 +5,7 @@ import 'package:loci/core/app_colors.dart';
 
 class AppTextStyles {
   static final TextStyle splash = GoogleFonts.passeroOne(
-    color: AppColors.white,
+    color: Colors.white,
     fontSize: 50,
     fontWeight: FontWeight.w500,
     shadows: [

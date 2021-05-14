@@ -6,9 +6,9 @@ import 'package:loci/login/widgets/login_card/login_card_widget.dart';
 class BarWidget extends PreferredSize {
   BarWidget()
       : super(
-          preferredSize: Size.fromHeight(650),
+          preferredSize: Size.fromHeight(150),
           child: Container(
-            height: 650,
+            height: 150,
             child: Stack(
               children: [
                 Container(
@@ -43,11 +43,11 @@ class BarWidget extends PreferredSize {
                   ),
                 ),
                 Align(
-                    alignment: Alignment(
-                      0.0,
-                      2.0,
-                    ),
-                    child: LoginCardWidget())
+                  alignment: Alignment(
+                    0.0,
+                    2.0,
+                  ),
+                )
               ],
             ),
           ),
