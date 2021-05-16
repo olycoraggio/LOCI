@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loci/login/widgets/bar/bar_widget.dart';
+import 'package:loci/login/widgets/button_social/button_social_widget.dart';
 import 'package:loci/login/widgets/login_card/login_card_widget.dart';
 
 import '../core/app_colors.dart';
@@ -26,32 +27,11 @@ class _LoginPageState extends State<LoginPage> {
       bottomNavigationBar: SafeArea(
         bottom: true,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.symmetric(vertical: 30),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconButton(
-                iconSize: 50,
-                alignment: Alignment.center,
-                icon: Image.asset(
-                  'assets/images/facebook.png',
-                ),
-                // color: Colors.transparent,
-                tooltip: 'Facebook',
-                splashColor: Colors.blue,
-                onPressed: () {},
-              ),
-              IconButton(
-                iconSize: 60,
-                alignment: Alignment.center,
-                icon: Image.asset(
-                  'assets/images/instagram.png',
-                ),
-                color: Colors.white,
-                tooltip: 'Instagram',
-                splashColor: Colors.amber,
-                onPressed: () {},
-              ),
+              ButtonSocialWidget(),
             ],
           ),
         ),

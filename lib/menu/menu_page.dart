@@ -1,12 +1,10 @@
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:loci/login/widgets/bar/bar_widget.dart';
 import 'package:loci/menu/widgets/card/card_menu_widget.dart';
-import 'package:loci/menu/widgets/menu_buttons/menu_buttons_widgets.dart';
+import 'package:loci/menu/widgets/card/test_card_menu_widget.dart';
 import 'package:loci/menu/widgets/top_bar/top_bar_widget.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
-
 import '../core/app_colors.dart';
 import '../core/app_colors.dart';
 import '../core/app_colors.dart';
@@ -40,7 +38,10 @@ class _MenuPageState extends State<MenuPage>
               padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
               child: TopBarWidget(
                 controller: tabController,
-                onTap: (index) {},
+                onTap: (index) {
+                  CardMenuWidget(); //colocar pra ir em cada página de produto
+                  TestCardMenuWidget();
+                },
               ),
             ),
             SizedBox(
@@ -49,6 +50,7 @@ class _MenuPageState extends State<MenuPage>
             Expanded(
               child: Container(
                 child: GridView.count(
+                  physics: BouncingScrollPhysics(),
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
@@ -65,7 +67,6 @@ class _MenuPageState extends State<MenuPage>
                 ),
               ),
             ),
-            
           ],
         ),
       ),
