@@ -59,8 +59,13 @@ class AppTextStyles {
     decoration: TextDecoration.underline,
   );
 
+  static final TextStyle tab = GoogleFonts.electrolize(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+  );
+
   static final TextStyle body = GoogleFonts.electrolize(
-    fontSize: 18,
+    fontSize: 18
   );
 
   static final TextStyle text = GoogleFonts.electrolize();

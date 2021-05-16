@@ -5,6 +5,7 @@ import 'package:loci/core/app_images.dart';
 import 'package:loci/core/app_text_styles.dart';
 
 class CardMenuWidget extends StatelessWidget {
+  //essas chamadas de propriedades abaixo devem ser repassadas onde a clase ja foi chamada
   // final String title;
   // final String description;
   // final double price;
@@ -44,7 +45,7 @@ class CardMenuWidget extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "Nome do prato",
+              "Nome do prato", //passar depois a propriedade 'title'
               style: AppTextStyles.text,
             ),
             SizedBox(
@@ -53,13 +54,13 @@ class CardMenuWidget extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Text(
-                "description",
+                "description", //passar depois a propriedade 'descripition'
                 style: AppTextStyles.body,
               ),
             ),
             Expanded(
               flex: 2,
-              child: Text("Price"),
+              child: Text("Price"), //passar depois a propriedade 'price'
             )
           ],
         ),
