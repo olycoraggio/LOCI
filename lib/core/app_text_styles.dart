@@ -62,11 +62,15 @@ class AppTextStyles {
   static final TextStyle tab = GoogleFonts.electrolize(
     fontSize: 24,
     fontWeight: FontWeight.w600,
+    color: Colors.grey[900],
   );
 
-  static final TextStyle body = GoogleFonts.electrolize(
-    fontSize: 18
+  static final TextStyle headingCard = GoogleFonts.passeroOne(
+    color: Colors.grey[900],
+    fontSize: 32,
   );
+
+  static final TextStyle body = GoogleFonts.electrolize(fontSize: 18);
 
   static final TextStyle text = GoogleFonts.electrolize();
 }

@@ -18,6 +18,10 @@ dependencies:
   google_fonts: ^2.0.0
   numberpicker: ^2.1.1
   tab_indicator_styler: ^1.0.0
+  flutter_credit_card: ^0.1.4
+  slimy_card: ^1.0.4
+  flutter_svg: ^0.19.3
+  flutter_fluid_slider: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -27,5 +31,6 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/icons/
 
   uses-material-design: true

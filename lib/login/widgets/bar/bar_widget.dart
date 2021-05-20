@@ -16,7 +16,7 @@ class BarWidget extends PreferredSize {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   width: double.maxFinite,
                   decoration: BoxDecoration(
-                    gradient: AppGradients.linearbar,
+                    gradient: AppGradients.linearBar,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black,
