@@ -3,6 +3,7 @@ import 'package:flutter_fluid_slider/flutter_fluid_slider.dart';
 import 'package:loci/core/app_colors.dart';
 
 class IndicatorCardWidget extends StatefulWidget {
+  
   @override
   IndicatorCardWidgetState createState() {
     return new IndicatorCardWidgetState();
@@ -29,9 +30,6 @@ class IndicatorCardWidgetState extends State<IndicatorCardWidget> {
             min: 0.0,
             max: 10.0,
             sliderColor: AppColors.indicatorTab,
-          ),
-          SizedBox(
-            height: 50.0,
           ),
         ],
       ),

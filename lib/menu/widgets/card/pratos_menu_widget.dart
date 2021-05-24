@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:loci/core/app_colors.dart';
-import 'package:loci/core/app_icons.dart';
 import 'package:loci/core/app_images.dart';
 import 'package:loci/core/app_text_styles.dart';
 import 'package:loci/menu/widgets/card/indicator/indicator_card_widget.dart';
@@ -23,6 +22,7 @@ class _PratoMenuState extends State<PratoMenu> {
           return Padding(
             padding: const EdgeInsets.all(10.0),
             child: ListView(
+              physics: BouncingScrollPhysics(),
               children: <Widget>[
                 SlimyCard(
                   width: 400,
@@ -62,9 +62,19 @@ class _PratoMenuState extends State<PratoMenu> {
           ),
         ),
         SizedBox(height: 10),
-        Text(
-          'Peru',
-          style: AppTextStyles.headingCard,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Peru',
+              style: AppTextStyles.headingCard,
+            ),
+            Text(
+              '72,99',
+              style: AppTextStyles.headingCard,
+            ),
+          ],
         ),
         SizedBox(height: 15),
         Container(
@@ -72,7 +82,7 @@ class _PratoMenuState extends State<PratoMenu> {
             child: Column(
               children: [
                 Text(
-                  'Peru assado nas chamas do planetóide mais quente juntamente com especiarias trazidas de planetas fazenda',
+                  'Peru assado nas chamas do planetóide mais quente da região juntamente com especiarias trazidas de planetas fazenda',
                   style: AppTextStyles.body,
                   textAlign: TextAlign.center,
                 ),
@@ -87,13 +97,13 @@ class _PratoMenuState extends State<PratoMenu> {
 
   Widget bottomCardWidget() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-          height: 20,
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: IndicatorCardWidget(),
         ),
-        IndicatorCardWidget(),
       ],
     );
   }

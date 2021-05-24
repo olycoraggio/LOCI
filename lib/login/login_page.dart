@@ -3,8 +3,6 @@ import 'package:loci/login/widgets/bar/bar_widget.dart';
 import 'package:loci/login/widgets/button_social/button_social_widget.dart';
 import 'package:loci/login/widgets/login_card/login_card_widget.dart';
 
-import '../core/app_colors.dart';
-
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
 

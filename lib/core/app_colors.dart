@@ -9,6 +9,6 @@ class AppColors {
   static final Color textButtonMenu = Color(0xFF2F4F4F);
   static final Color indicator = Color(0xFFC0C0C0);
   static final Color silver = Colors.blueGrey[50];
-  static final Color tab = Color(0xFF808080);
+  static final Color tab = Color(0xFFAEAEAE);
   static final Color indicatorTab = Colors.yellow[900];
 }

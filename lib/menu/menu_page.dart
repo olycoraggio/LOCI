@@ -3,17 +3,12 @@ import 'package:loci/core/app_colors.dart';
 import 'package:loci/core/app_gradient.dart';
 import 'package:loci/core/app_text_styles.dart';
 import 'package:loci/menu/widgets/card/bebidas_menu_widgets.dart';
-import 'package:loci/menu/widgets/card/indicator/indicator_card_widget.dart';
 import 'package:loci/menu/widgets/card/pratos_menu_widget.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
-class TabBarWIdget extends StatelessWidget {
+class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    textStyle() {
-      return TextStyle(color: Colors.white, fontSize: 30.0);
-    }
-
     return new DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -47,6 +42,7 @@ class TabBarWIdget extends StatelessWidget {
             ),
           ),
           bottom: TabBar(
+            physics: BouncingScrollPhysics(),
             overlayColor: MaterialStateProperty.all(Colors.transparent),
             labelPadding: EdgeInsets.zero,
             indicatorPadding: EdgeInsets.zero,
@@ -74,6 +70,7 @@ class TabBarWIdget extends StatelessWidget {
           ),
         ),
         body: TabBarView(
+          physics: BouncingScrollPhysics(),
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -96,7 +93,8 @@ class TabBarWIdget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
                 IconButton(
@@ -108,8 +106,14 @@ class TabBarWIdget extends StatelessWidget {
                     Navigator.pushNamed(context, '/cart');
                   },
                 ),
-                Spacer(),
-                Text('Valor'),
+                // Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(left: 120),
+                  child: Text(
+                    "Valor",
+                    style: AppTextStyles.body,
+                  ),
+                ),
                 Spacer(),
               ],
             ),

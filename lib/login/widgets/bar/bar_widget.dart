@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loci/core/app_gradient.dart';
 import 'package:loci/core/app_text_styles.dart';
-import 'package:loci/login/widgets/login_card/login_card_widget.dart';
 
 class BarWidget extends PreferredSize {
   BarWidget()

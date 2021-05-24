@@ -22,6 +22,7 @@ dependencies:
   slimy_card: ^1.0.4
   flutter_svg: ^0.19.3
   flutter_fluid_slider: ^1.0.2
+  
 
 dev_dependencies:
   flutter_test:
